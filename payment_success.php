@@ -24,7 +24,7 @@ if ($_GET['session_id'] !== $_SESSION['stripe_session_id']) {
 }
 
 require_once 'vendor/autoload.php';
-\Stripe\Stripe::setApiKey('sk_test_51RZTbAP7LZzKUp9wfkMeXkunbq7Q4gipW6Y1qatrgUKYNFjAhjSxV1pejvNpVw7zpzxAsmKnxJ4IchaynEFeokhd001C08HcV1');
+\Stripe\Stripe::setApiKey('');
 
 try {
     // Retrieve the Checkout Session
@@ -134,4 +134,5 @@ try {
     header("Location: patient_book_appointment.php");
     exit();
 }
+
 ?>
