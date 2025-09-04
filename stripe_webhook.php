@@ -2,7 +2,7 @@
 require_once 'db.php';
 require_once 'vendor/autoload.php';
 
-\Stripe\Stripe::setApiKey('sk_test_51RZTbAP7LZzKUp9wfkMeXkunbq7Q4gipW6Y1qatrgUKYNFjAhjSxV1pejvNpVw7zpzxAsmKnxJ4IchaynEFeokhd001C08HcV1');
+\Stripe\Stripe::setApiKey('');
 
 $payload = @file_get_contents('php://input');
 $sig_header = $_SERVER['HTTP_STRIPE_SIGNATURE'];
@@ -52,4 +52,5 @@ if ($event->type == 'checkout.session.completed') {
 }
 
 http_response_code(200);
+
 ?>
