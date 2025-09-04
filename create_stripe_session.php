@@ -10,7 +10,7 @@ if (!isset($_SESSION['pending_appointment'])) {
 require_once 'vendor/autoload.php';
 
 // Set your secret key
-\Stripe\Stripe::setApiKey('sk_test_51RZTbAP7LZzKUp9wfkMeXkunbq7Q4gipW6Y1qatrgUKYNFjAhjSxV1pejvNpVw7zpzxAsmKnxJ4IchaynEFeokhd001C08HcV1');
+\Stripe\Stripe::setApiKey('');
 
 // Retrieve appointment details from session
 $appointment_data = $_SESSION['pending_appointment'];
@@ -54,4 +54,5 @@ try {
     header("Location: patient_book_appointment.php");
     exit();
 }
+
 ?>
